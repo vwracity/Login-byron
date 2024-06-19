@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Setup e utlidades */
+
+:root{
+    --color-primary: #175588;
+    --color-black: #191919;
+    --color-bg: #f4f7f6;
+    --color-white: #ffffff;
+    --color-int:#36ac9e;
+    font-family: "Poppins", Helvetica, sans-serif ;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-bg);
+
+    background-color: var(--color-bg);
+}
+
+
+
+/* header*/
+#header {
+    
+    display: flex;
+
+    height: 184px;
+    background-color: var(--color-primary);
+
+    width: 100%;
+    
+    
+}
+
+/* Escritas e Menu*/
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+    max-height: 1080px;
+}
+
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    
+
+    height: 400px;
+    width: 500px;
+
+}
+
+
+#menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 50px;   
+    
+    margin-top: -180px;
+    
+}
+ 
+#menu h1{
+    
+    display: flex;
+    
+
+    align-items: center;
+    font-weight: 400;
+    color: var(--color-white);
+ 
+    gap: 1.3rem;
+   
+ 
+    font-size: 24px;
+    margin: 0;  
+
+}
+
+#menu  h2 {
+    color: var(--color-black);
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#menu  h3 {
+    color: var(--color-black);
+    font-size: 20px;
+}
+
+#menu img{
+     width: 150px;  
+     
+}
+ 
+ 
+ /*Section Log-in*/
+ 
+#Menulogin {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    background-color: var(--color-white);
+     
+    height: 400px;
+    width: 330px;
+    border-radius: 20px;
+
+    margin-top: 120px;
+
+    gap: 35px;
+    padding: 15px;
+    
+}
+
+#menu input{
+    display: flex;
+    
+
+    height: 50px;
+    width: 270px;
+
+    border: 1px solid lightslategray;
+    border-radius: 30px;
+
+   
+}
+
+.campoinput{
+    padding-left: 30px;
+    padding-right: 20px;
+
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-bg);
+
+    gap: 10px;
+    background-color: var(--color-int);
+    height: 50px;
+    width: 180px;
+    border-radius: 20px;
+
+    text-decoration: none;
+    margin: 0;
+    transition: 250 ms;
+}
+
+.botao:hover{
+    transform: scale(1.02);
+}
+
+.esquecisenha{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    
+    color: var(--color-int);
+    margin: 10px;
+    transition: 150ms;
+}
+
+.esquecisenha:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+

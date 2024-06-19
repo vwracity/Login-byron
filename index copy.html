@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script 
+    src="https://kit.fontawesome.com/8423e2eeb9.js" crossorigin="anonymous">
+    </script>
+   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .balls-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none; 
+      z-index: -1; 
+    }
+    .ball {
+      position: absolute;
+      border-radius: 10%;
+      opacity: 0.4;
+    }
+    
+
+  </style>
+</head>
+<body>
+    <div id="header">
+
+    </div>
+    
+    
+    
+        <section id="menu">
+                
+                <div class="wrap">
+                    <h1>
+                        <img src="./assets/img/Ícone.png" alt="Logo da Byron"> ÁREA DO COLABORADOR
+                    </h1>
+                    <h2>
+                         Aqui, você pode monitorar seu progresso e acessar conteúdos especialmente desenvolvidos para você.
+                    </h2>
+                </div>
+                
+                <div id="Menulogin">
+                    <h3>FACA SEU LOGIN</h3> 
+                    <input type="text" class="campoinput" placeholder="E-Mail">
+                    <input type="password" class="campoinput" placeholder="Senha">
+                    <div>
+                        <a href="index copy.html" class="botao">Entrar</a>
+                        <a href="index copy.html" class="esquecisenha">Esqueci minha senha</a>
+                    </div>
+                </div>
+            
+       
+        </section>
+       
+    
+            
+           
+        
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="balls-container"></div>
+    <script>
+      // cores
+      const colors = ["#7a7a7a"];
+      const numBalls = 150;
+      const balls = [];
+  
+      for (let i = 0; i < numBalls; i++) {
+        let ball = document.createElement("div");
+        ball.classList.add("ball");
+        ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+        ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+        ball.style.transform = `scale(${Math.random()})`;
+        ball.style.width = `${Math.random() * 0.3}em`;
+        ball.style.height = ball.style.width;
+  
+        balls.push(ball);
+        document.querySelector(".balls-container").append(ball);
+      }
+  
+      // Keyframes
+      balls.forEach((el, i, ra) => {
+        let to = {
+          x: Math.random() * (i % 2 === 0 ? -11 : 11),
+          y: Math.random() * 12
+        };
+  
+        el.animate(
+          [
+            { transform: "translate(0, 0)" },
+            { transform: `translate(${to.x}rem, ${to.y}rem)` }
+          ],
+          {
+            duration: (Math.random() + 1) * 2000, // duração aleatória
+            direction: "alternate",
+            fill: "both",
+            iterations: Infinity,
+            easing: "ease-in-out"
+          }
+        );
+      });
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
